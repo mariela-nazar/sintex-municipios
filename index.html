@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINTEX – Gestión de Prensa para Municipios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-sintex: #1f3c88;
+            --azul-oscuro: #102a71;
+            --gris-fondo: #f8f9fa;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--gris-fondo);
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--azul-sintex) 0%, var(--azul-oscuro) 100%);
+            color: #fff;
+            padding: 40px 20px 80px 20px; /* Reduje el padding superior */
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            letter-spacing: 4px;
+            font-weight: 800;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.4rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 900px;
+            margin: -70px auto 40px; /* SUBÍ EL BLOQUE: de -40px a -70px */
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 10;
+        }
+        h2 {
+            color: var(--azul-sintex);
+            font-size: 1.8rem;
+            margin-top: 40px;
+            border-left: 5px solid var(--azul-sintex);
+            padding-left: 15px;
+        }
+        .intro-text {
+            font-size: 1.15rem;
+            color: #444;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .item-servicio {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .item-servicio i {
+            color: var(--azul-sintex);
+            font-size: 1.4rem;
+            margin-top: 5px;
+        }
+        
+        /* CAJA DE NOTICIA ESTILIZADA AL 50% */
+        .preview-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .noticia-card {
+            width: 50%; 
+            min-width: 320px;
+            border: 1px solid #e1e4e8;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .card-tag {
+            background: var(--azul-sintex);
+            color: white;
+            font-size: 0.7rem;
+            padding: 5px 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .card-img {
+            width: 100%;
+            height: 180px;
+            background: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.25rem;
+            line-height: 1.3;
+            color: #111;
+        }
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .card-footer {
+            border-top: 1px solid #f0f0f0;
+            padding: 10px 20px;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            background: #fafafa;
+            color: #888;
+        }
+
+        .contacto-seccion {
+            text-align: center;
+            background: var(--azul-sintex);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .btn-contacto {
+            display: inline-block;
+            background: #fff;
+            color: var(--azul-sintex);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .btn-contacto:hover {
+            background: #f0f2f5;
+        }
+
+        footer {
+            background-color: #f0f2f5;
+            color: #666;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SINTEX</h1>
+    <p>Estrategia y proyección provincial para la gestión municipal</p>
+</header>
+
+<div class="container">
+    <div class="intro-text">
+        Los municipios bonaerenses generan información valiosa cada día. En <strong>SINTEX</strong>, transformamos esos anuncios de gestión y obras en contenido periodístico de alto impacto para los principales medios digitales de la Provincia.
+    </div>
+
+    <h2>Qué hacemos</h2>
+    <div class="grid-servicios">
+        <div class="item-servicio">
+            <i class="fas fa-edit"></i>
+            <span><strong>Edición Profesional:</strong> Redactamos con criterio periodístico para jerarquizar cada noticia.</span>
+        </div>
+        <div class="item-servicio">
+            <i class="fas fa-network-wired"></i>
+            <span><strong>Adaptación Digital:</strong> Optimizamos contenidos para el lenguaje de los medios provinciales.</span>
+        </div>
+        <div class="item-servicio">
+            <i class="fas fa-chart-line"></i>
+            <span><strong>Presencia Sostenida:</strong> Instalamos la agenda de su municipio en el radar de la provincia.</span>
+        </div>
+        <div class="item-servicio">
+            <i class="fas fa-compress-alt"></i>
+            <span><strong>Complemento Estratégico:</strong> Potenciamos su comunicación local sin reemplazarla.</span>
+        </div>
+    </div>
+
+    <h2>Ejemplo de proyección</h2>
+    <p>Visualice cómo una gacetilla técnica se transforma en una noticia de interés provincial:</p>
+    
+    <div class="preview-container">
+        <div class="noticia-card">
+            <div class="card-tag">Gestión Provincial</div>
+            <div class="card-img">
+                <i class="fas fa-camera fa-2x"></i>
+                <span style="font-size: 0.8rem; margin-top:5px;">Foto de Gestión</span>
+            </div>
+            <div class="card-content">
+                <h3>Histórica inversión en infraestructura pluvial</h3>
+                <p>El Municipio anunció el inicio de obras que beneficiarán a 5.000 vecinos, garantizando soluciones definitivas...</p>
+            </div>
+            <div class="card-footer">
+                <span>Municipio de XXXX</span>
+                <strong>SINTEX</strong>
+            </div>
+        </div>
+    </div>
+
+    <h2>Propuestas Personalizadas</h2>
+    <p>
+        No creemos en paquetes cerrados. El valor de nuestro abono y la frecuencia de publicación se adaptan a la realidad de cada municipio, sus objetivos y su volumen de información.
+    </p>
+
+    <div class="contacto-seccion">
+        <h3>¿Hablamos de su municipio?</h3>
+        <p>Elaboremos una propuesta a medida para proyectar su gestión.</p>
+        <a href="mailto:contacto@sintex.com.ar?subject=Consulta%20Propuesta%20SINTEX" class="btn-contacto">Solicitar propuesta personalizada</a>
+    </div>
+</div>
+
+<footer>
+    <p><strong>sintex.com.ar</strong> | Todos los derechos reservados</p>
+    <p>Servicio de prensa para municipios de la Provincia de Buenos Aires</p>
+</footer>
+
+</body>
+</html>
